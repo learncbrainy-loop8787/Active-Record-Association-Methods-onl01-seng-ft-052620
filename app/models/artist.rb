@@ -2,7 +2,7 @@ class Artist < ActiveRecord::Base
   has_many :songs
   has_many :genres, through: :songs
 
-  def self.get_genre_of_first_song
+  def get_genre_of_first_song
     self.genres.first
   end
 
